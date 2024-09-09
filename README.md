@@ -14,6 +14,8 @@ ectly within the table. Changes are applied in memory.
 - **Row Selection**: Select multiple rows and delete them at once using the 'Delete Selected' button. Rows can be selected individually or all at once using the checkbox in the header.
 - **Responsive Layout**: The interface adapts to different screen sizes while maintaining functionality.
 
+<img width="1440" alt="Screenshot 2024-09-10 at 1 55 11 AM" src="https://github.com/user-attachments/assets/74c0999f-bd94-4b40-a290-9d55dc9cfa34">
+
 ## Installation
 
 1. **Clone the Repository**:
