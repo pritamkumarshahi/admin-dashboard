@@ -8,7 +8,8 @@ This project is a web application designed for administrators to manage users it
 - **Tile Layout** A placeholder layout to until the data is loading
 - **Column Titles**: Column titles in the table are highlighted for easy identification.
 - **Search Bar**: Filter users by name, email, or role. Search results update in real-time as you type or press Enter.
-- **Edit/Delete Rows**: Edit or delete individual user records directly within the table. Changes are applied in memory.
+- **Edit/Delete Rows**: Edit or delete individual user records dir
+ectly within the table. Changes are applied in memory.
 - **Pagination**: Navigate through user data with pagination controls. Each page shows 10 rows. Pagination includes buttons for the first page, previous page, next page, and last page. Pagination updates based on search/filtering results.
 - **Row Selection**: Select multiple rows and delete them at once using the 'Delete Selected' button. Rows can be selected individually or all at once using the checkbox in the header.
 - **Responsive Layout**: The interface adapts to different screen sizes while maintaining functionality.
@@ -17,7 +18,7 @@ This project is a web application designed for administrators to manage users it
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/your-repository-name.git
+   git clone https://github.com/pritamkumarshahi/admin-dashboard.git
 
 
 ## Available Scripts
