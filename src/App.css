@@ -1,38 +1,101 @@
 .App {
+  padding: 20px;
+};
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+.parent-div-pagination {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Ensure it takes the full height of the parent container */
+}
+
+.page-number {
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  border-radius: 50px;
+  background-color: #2489ed;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.page-number:hover {
+  background-color: #ffffff; /* Optional: Add hover effect */
+  border: 1px solid #2489ed;
+  color: #2489ed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.disabled {
+  background-color: #dcdcdc; /* Optional: Add hover effect */
+  color: #9e9e9e;
+  opacity: 0.5;
 }
+
+.isActive {
+  background-color: #ffffff; /* Optional: Add hover effect */
+  border: 1px solid #2489ed;
+  color: #2489ed;
+}
+
+.notification {
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  color: white;
+}
+
+.notification.success {
+  background-color: green;
+}
+
+.notification.error {
+  background-color: red;
+}
+
+.notification.warning {
+  background-color: orange;
+}
+
