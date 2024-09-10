@@ -49,9 +49,8 @@ const Table = ({ currentUsers, search, onDelete, onEdit }) => {
   console.log(search, "");
 
   return (
-    <div>
-      <table>
-        <thead>
+    <div style={{ width: "100%" }}>
+      <table id="table-content" style={{ width: "100%"}}>
         <tr>
           <th>
             <input
@@ -68,8 +67,6 @@ const Table = ({ currentUsers, search, onDelete, onEdit }) => {
           <th>Role</th>
           <th>Actions</th>
         </tr>
-        </thead>
-        <tbody>
         {filteredUsers.map((user) => {
             return (
               <tr key={user.id}>
@@ -94,7 +91,6 @@ const Table = ({ currentUsers, search, onDelete, onEdit }) => {
               </tr>
             );
         })}
-        </tbody>
       </table>
       <button onClick={handleDeleteSelected} style={{ color: "red", border: "1px solid red", marginTop: "20px" }}>
         Delete Selected

@@ -3,9 +3,10 @@
 };
 
 table {
-  width: 100%;
+  width: 100% !important;
   border-collapse: collapse;
   text-align: center;
+  box-sizing: border-box;
 }
 
 th, td {
