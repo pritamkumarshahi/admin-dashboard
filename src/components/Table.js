@@ -7,12 +7,14 @@ const Table = ({ currentUsers, search, onDelete, onEdit }) => {
   useEffect(() => {
     const query = search.toLowerCase();
     const filteredResult = currentUsers.filter((user) => {
-      return user.id.toLowerCase().includes(query) ||
+      return (
+        user.id.toLowerCase().includes(query) ||
         user.name.toLowerCase().includes(query) ||
         user.email.toLowerCase().includes(query) ||
         user.role.toLowerCase().includes(query)
+      );
     });
-    setFilteredUsers(filteredResult)
+    setFilteredUsers(filteredResult);
   }, [search, currentUsers]);
 
   const handleSelectAll = (e) => {
@@ -39,35 +41,38 @@ const Table = ({ currentUsers, search, onDelete, onEdit }) => {
 
   const handleDeleteSingle = (id) => {
     onDelete([id]);
-    setSelectedUser(selectedUser.filter((userId) => userId !==id));
-  }
+    setSelectedUser(selectedUser.filter((userId) => userId !== id));
+  };
 
   const handleEditSingle = (user) => {
-        onEdit(user);
-  }
+    onEdit(user);
+  };
 
   console.log(search, "");
 
   return (
     <div style={{ width: "100%" }}>
-      <table id="table-content" style={{ width: "100%"}}>
-        <tr>
-          <th>
-            <input
-              type="checkbox"
-              onChange={handleSelectAll}
-              checked={
-                selectedUser.length === currentUsers.length &&
-                currentUsers.length > 0
-              }
-            ></input>
-          </th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Role</th>
-          <th>Actions</th>
-        </tr>
-        {filteredUsers.map((user) => {
+      <table id="table-content" style={{ width: "100%" }}>
+        <thead>
+          <tr>
+            <th>
+              <input
+                type="checkbox"
+                onChange={handleSelectAll}
+                checked={
+                  selectedUser.length === currentUsers.length &&
+                  currentUsers.length > 0
+                }
+              ></input>
+            </th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredUsers.map((user) => {
             return (
               <tr key={user.id}>
                 <td>
@@ -81,18 +86,28 @@ const Table = ({ currentUsers, search, onDelete, onEdit }) => {
                 <td>{user.email}</td>
                 <td>{user.role}</td>
                 <td>
-                  <button style={{ marginRight: "10px" }} onClick={() => handleEditSingle(user)}>
+                  <button
+                    style={{ marginRight: "10px" }}
+                    onClick={() => handleEditSingle(user)}
+                  >
                     <i className="far fa-edit"></i> Edit
                   </button>
-                  <button style={{ color: "red", border: "1px solid red" }} onClick={() => handleDeleteSingle(user.id)}>
+                  <button
+                    style={{ color: "red", border: "1px solid red" }}
+                    onClick={() => handleDeleteSingle(user.id)}
+                  >
                     <i className="far fa-trash-alt"></i> Delete
                   </button>
                 </td>
               </tr>
             );
-        })}
+          })}
+        </tbody>
       </table>
-      <button onClick={handleDeleteSelected} style={{ color: "red", border: "1px solid red", marginTop: "20px" }}>
+      <button
+        onClick={handleDeleteSelected}
+        style={{ color: "red", border: "1px solid red", marginTop: "20px" }}
+      >
         Delete Selected
       </button>
     </div>
