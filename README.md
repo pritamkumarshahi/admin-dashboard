@@ -33,6 +33,8 @@ This will install all the packages;
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+OR To see the live app, please [click here](https://pritamkumarshahi.github.io/admin-dashboard).
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
